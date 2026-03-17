@@ -1,8 +1,8 @@
 #include <iostream>
-using namspace std;
+using namespace std;
 
-void input( int& hours24, int& minutes);
-void output( int hours, int minutes);
+void input(int& hours24, int& minutes);
+void output(int hours, int minutes);
 
 int main()
 {
@@ -34,7 +34,7 @@ int main()
 
     finishMinutes%= 60;
 
-    cout << "Completion ";
+    cout << "Completion Time in 24 hour format: " << endl;
     output(finishHours, finishMinutes);
 
 	cout << "\n\nEnter Y or y to continue, any other halts\n\n";
@@ -42,5 +42,15 @@ int main()
   }
 
   return 0;
+}
+
+void input(int& hours24, int& minutes){
+    char hold;
+    cout << "Enter 24 hour time in the format HH:MM ";
+    cin >> hours24 >> hold >> minutes;
+}
+
+void output(int hours, int minutes){
+    cout << hours << ":" << minutes << endl;
 }
 
